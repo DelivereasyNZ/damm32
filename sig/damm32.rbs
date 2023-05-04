@@ -15,5 +15,6 @@ module Damm32
   def self.from_b32_ord: (Integer) -> String
   def self.checksum: (String) -> String
   def self.checksum_ord: (Array[Integer]) -> Integer
+  def self.add_checksum: (String) -> String
   def self.valid?: (String) -> bool
 end

@@ -61,6 +61,10 @@ module Damm32
     from_b32_ord(result)
   end
 
+  def self.add_checksum(string)
+    "#{string}#{checksum(string)}"
+  end
+
   def self.valid?(string)
     content = string[0..-2]
     included_check = string[-1]

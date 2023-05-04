@@ -12,7 +12,7 @@ RSpec.describe Damm32 do
 
   describe "#checksum_ord" do
     context "when supplied an array of in-range integers" do
-      it "computes a Damm32 checksum" do
+      it "computes a damm32 checksum" do
         expect(Damm32.checksum_ord([1, 2, 3])).to eq(5)
       end
     end
@@ -20,9 +20,15 @@ RSpec.describe Damm32 do
 
   describe "#checksum" do
     context "when supplied a string of in-range characters" do
-      it "computes a Damm32 checksum" do
+      it "computes a damm32 checksum" do
         expect(Damm32.checksum("bcd")).to eq("f")
       end
+    end
+  end
+
+  describe "#add_checksum" do
+    it "adds a damm32 checksum to the end" do
+      expect(Damm32.add_checksum("bcd")).to eq("bcdf")
     end
   end
 
