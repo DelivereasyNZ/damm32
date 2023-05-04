@@ -18,6 +18,9 @@ If bundler is not being used to manage dependencies, install the gem by executin
 Damm32.checksum("abc")
 => "g"
 
+Damm32.add_checksum("abc")
+=> "abcg"
+
 Damm32.valid?("abcg")
 => true
 
