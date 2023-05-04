@@ -1,0 +1,19 @@
+module Damm32
+  VERSION: String
+
+  DAMM_LOOKUP_TABLE: Array[Array[Integer]]
+  RFC4648_BASE32_ALPHABET: Array[String]
+  RFC4648_BASE32_ALPHABET_PATTERN: Regexp
+
+  class UnknownAlphabet < StandardError
+  end
+
+  class OutOfRange < StandardError
+  end
+
+  def self.to_b32_ord: (String) -> Integer
+  def self.from_b32_ord: (Integer) -> String
+  def self.checksum: (String) -> String
+  def self.checksum_ord: (Array[Integer]) -> Integer
+  def self.valid?: (String) -> bool
+end
